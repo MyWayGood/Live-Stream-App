@@ -1,0 +1,49 @@
+# Live Stream - Windows App Schedule Log
+# Version: v1.0.0
+# Developer: Manikandan Govindan
+# Organization: SingleDawn Corp
+# Country: India, Tamil Nadu
+# Platform: Windows 10 and 11 (and above)
+# Log Start Date: [DD-MM-YYYY]
+# Log Start Time: [HH:MM:SS]
+
+-------------------------------------------------
+[DD-MM-YYYY] [HH:MM:SS] - INFO - Schedule log initiated.
+-------------------------------------------------
+
+[DD-MM-YYYY] [HH:MM:SS] - INFO - Scheduled new video for streaming.
+                Video Path: uploaded-videos/video_name.mp4
+                Scheduled Date: [DD:MM:YYYY]
+                Start Time: [HH:MM:SS]
+                End Time: [HH:MM:SS]
+                Platform: YouTube
+                RTMP URL: rtmp://a.rtmp.youtube.com/live2/$STREAM_KEY
+                Stream Key: [stream_key_value]
+
+[DD-MM-YYYY] [HH:MM:SS] - SUCCESS - Video successfully scheduled.
+                Video Path: uploaded-videos/video_name.mp4
+                Scheduled Date: [DD:MM:YYYY]
+                Start Time: [HH:MM:SS]
+                Platform: Facebook
+                RTMP URL: rtmp://live-api-s.facebook.com:80/rtmp/$STREAM_KEY
+                Stream Key: [stream_key_value]
+
+[DD-MM-YYYY] [HH:MM:SS] - ERROR - Failed to schedule video.
+                Video Path: uploaded-videos/video_name.mp4
+                Scheduled Date: [DD:MM:YYYY]
+                Start Time: [HH:MM:SS]
+                Platform: Twitch
+                Error Message: [Detailed error message]
+
+[DD-MM-YYYY] [HH:MM:SS] - INFO - Deleting a previously scheduled video.
+                Video Path: scheduled-videos/previously_scheduled_video.mp4
+                Original Scheduled Date: [DD:MM:YYYY]
+                Original Start Time: [HH:MM:SS]
+                Platform: Instagram
+
+[DD-MM-YYYY] [HH:MM:SS] - SUCCESS - Video successfully deleted from schedule.
+                Video Path: scheduled-videos/previously_scheduled_video.mp4
+
+-------------------------------------------------
+[DD-MM-YYYY] [HH:MM:SS] - INFO - Schedule log ended.
+-------------------------------------------------

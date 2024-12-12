@@ -1,0 +1,73 @@
+# Live Stream - Windows App Installation Log
+# Version: v1.0.0
+# Developer: Manikandan Govindan
+# Organization: SingleDawn Corp
+# Date: [DD-MM-YYYY]
+# Time: [HH:MM:SS]
+
+================================================================================
+                            INSTALLATION PROCESS BEGINS
+================================================================================
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Installation process initiated.
+[INFO] [DD-MM-YYYY HH:MM:SS] Checking system requirements.
+[INFO] [DD-MM-YYYY HH:MM:SS] Operating System: [Detected OS Version]
+[INFO] [DD-MM-YYYY HH:MM:SS] Python Version: [Detected Python Version]
+[INFO] [DD-MM-YYYY HH:MM:SS] User has accepted the Terms of Service.
+
+--------------------------------------------------------------------------------
+                               DEPENDENCIES INSTALLATION
+--------------------------------------------------------------------------------
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Unzipping Python 3.12.5...
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing Python 3.12.5...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] Python 3.12.5 installed successfully.
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing required Python modules...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] Python modules installed successfully.
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Unzipping PyInstaller 6.10.0...
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing PyInstaller 6.10.0...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] PyInstaller 6.10.0 installed successfully.
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Unzipping FFmpeg...
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing FFmpeg...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] FFmpeg installed successfully.
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Unzipping Kivy 2.3.0...
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing Kivy 2.3.0...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] Kivy 2.3.0 installed successfully.
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Unzipping YT-DLP 2024.08.06...
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing YT-DLP...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] YT-DLP installed successfully.
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Unzipping Flatpickr 4.6.13...
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing Flatpickr...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] Flatpickr installed successfully.
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Unzipping FFPYPLAYER 4.5.1...
+[INFO] [DD-MM-YYYY HH:MM:SS] Installing FFPYPLAYER...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] FFPYPLAYER installed successfully.
+
+--------------------------------------------------------------------------------
+                                 FINALIZING SETUP
+--------------------------------------------------------------------------------
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Configuring environment variables.
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] Environment variables configured successfully.
+
+[INFO] [DD-MM-YYYY HH:MM:SS] Verifying installation...
+[SUCCESS] [DD-MM-YYYY HH:MM:SS] Installation verification completed. All components are installed correctly.
+
+--------------------------------------------------------------------------------
+                                  ERRORS / WARNINGS
+--------------------------------------------------------------------------------
+
+[INFO] [DD-MM-YYYY HH:MM:SS] No errors or warnings detected during the installation process.
+
+================================================================================
+                             INSTALLATION PROCESS COMPLETED
+================================================================================
+[INFO] [DD-MM-YYYY HH:MM:SS] Installation completed successfully.
+[INFO] [DD-MM-YYYY HH:MM:SS] Log file saved: LiveStreamApp/logs/install.log
+================================================================================
