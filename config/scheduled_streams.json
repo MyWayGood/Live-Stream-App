@@ -1,0 +1,17 @@
+[
+{
+    "scheduled_streams": []
+}
+    {
+        "video_file": "example.mp4",
+        "start_time": "2024-10-11 15:00:00",
+        "platform": "YouTube",
+        "stream_key": "abcd1234"
+    },
+    {
+        "video_file": "stream_event.mp4",
+        "start_time": "2024-10-12 18:00:00",
+        "platform": "Twitch",
+        "stream_key": "twitch_key_5678"
+    }
+]

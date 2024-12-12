@@ -1,0 +1,35 @@
+{
+    "video_settings": {
+        "default_resolution": "HD",
+        "resolutions": ["SD", "HD", "FHD", "4K"],
+        "default_bitrate": "4Mbps",
+        "bitrates": ["1Mbps", "2Mbps", "4Mbps", "8Mbps", "16Mbps", "25Mbps"]
+    },
+    "audio_settings": {
+        "default_bitrate": "128kbps",
+        "bitrates": ["64kbps", "96kbps", "128kbps", "192kbps", "256kbps"]
+    },
+    "app_preferences": {
+        "auto_start_stream": false,
+        "enable_notifications": true,
+        "dark_mode": true,
+        "language": "en"
+    },
+    "rtmp_urls": {
+        "Dailymotion": "rtmp://publish.dailymotion.com/live?stream_key=$STREAM_KEY",
+        "Facebook": "rtmp://live-api-s.facebook.com:80/rtmp/$STREAM_KEY",
+        "Instagram": "rtmp://live-upload.instagram.com:80/rtmp/$STREAM_KEY",
+        "Kick": "rtmp://live.kick.com/app/$STREAM_KEY",
+        "Rumble": "rtmp://live.rumble.com/$STREAM_KEY",
+        "TikTok": "rtmp://live.tiktok.com/live/$STREAM_KEY",
+        "Twitch": "rtmp://live.twitch.tv/app/$STREAM_KEY",
+        "Vimeo": "rtmp://live.vimeo.com/app/$STREAM_KEY",
+        "X": "rtmp://live.pscp.tv:80/x/$STREAM_KEY",
+        "YouTube": "rtmp://a.rtmp.youtube.com/live2/$STREAM_KEY",
+        "Custom": {
+            "name": "Custom RTMP",
+            "url": "rtmp://your.custom.rtmp.server/app",
+            "requires_key": true
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "Dailymotion": {
+        "stream_key": ""
+    },
+    "Facebook": {
+        "stream_key": ""
+    },
+    "Instagram": {
+        "stream_key": ""
+    },
+    "Kick": {
+        "stream_key": ""
+    },
+    "Rumble": {
+        "stream_key": ""
+    },
+    "TikTok": {
+        "stream_key": ""
+    },
+    "Twitch": {
+        "stream_key": ""
+    },
+    "Vimeo": {
+        "stream_key": ""
+    },
+    "X": {
+        "stream_key": ""
+    },
+    "YouTube": {
+        "stream_key": ""
+    },
+    "Custom": {
+        "stream_key": ""
+    }
+}

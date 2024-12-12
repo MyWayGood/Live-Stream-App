@@ -1,0 +1,59 @@
+{
+    "platforms": [
+        {
+            "name": "YouTube",
+            "rtmp_url": "rtmp://a.rtmp.youtube.com/live2/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Twitch",
+            "rtmp_url": "rtmp://live.twitch.tv/app/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Facebook",
+            "rtmp_url": "rtmp://live-api-s.facebook.com:80/rtmp/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Instagram",
+            "rtmp_url": "rtmp://live-upload.instagram.com:80/rtmp/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Dailymotion",
+            "rtmp_url": "rtmp://publish.dailymotion.com/live?stream_key=$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Kick",
+            "rtmp_url": "rtmp://live.kick.com/app/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Rumble",
+            "rtmp_url": "rtmp://live.rumble.com/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "TikTok",
+            "rtmp_url": "rtmp://live.tiktok.com/live/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Vimeo",
+            "rtmp_url": "rtmp://live.vimeo.com/app/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "X (Twitter)",
+            "rtmp_url": "rtmp://live.pscp.tv:80/x/$STREAM_KEY",
+            "enabled": true
+        },
+        {
+            "name": "Custom Platform",
+            "rtmp_url": "",
+            "enabled": false
+        }
+    ]
+}
