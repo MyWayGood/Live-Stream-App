@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Live Stream</title>
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="assets/flatpickr.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule a Live Stream</h1>
+
+        <form id="schedule-form">
+            <!-- Stream Key Input -->
+            <div class="form-group">
+                <label for="stream-key">Stream Key:</label>
+                <input type="text" id="stream-key" name="stream-key" required placeholder="Enter your stream key">
+            </div>
+
+            <!-- Video File Input -->
+            <div class="form-group">
+                <label for="video-file">Select MP4 Video:</label>
+                <input type="file" id="video-file" name="video-file" accept=".mp4" required>
+            </div>
+
+            <!-- Schedule Date Input -->
+            <div class="form-group">
+                <label for="schedule-date">Schedule Date:</label>
+                <input type="text" id="schedule-date" name="schedule-date" placeholder="Select Date" required>
+            </div>
+
+            <!-- Start Time Input -->
+            <div class="form-group">
+                <label for="start-time">Start Time:</label>
+                <input type="text" id="start-time" name="start-time" placeholder="Select Start Time" required>
+            </div>
+
+            <!-- End Time Input -->
+            <div class="form-group">
+                <label for="end-time">End Time:</label>
+                <input type="text" id="end-time" name="end-time" placeholder="Select End Time" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Schedule Stream</button>
+        </form>
+    </div>
+
+    <!-- Flatpickr JS -->
+    <script src="assets/flatpickr.js"></script>
+    <!-- Initialize Flatpickr -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Flatpickr for date and time pickers
+            flatpickr('#schedule-date', {
+                dateFormat: 'd-m-Y',
+                altInput: true,
+                altFormat: 'F j, Y',
+                allowInput: true
+            });
+
+            flatpickr('#start-time', {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: 'H:i:S',
+                time_24hr: true,
+                altInput: true,
+                altFormat: 'h:i K',
+                allowInput: true
+            });
+
+            flatpickr('#end-time', {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: 'H:i:S',
+                time_24hr: true,
+                altInput: true,
+                altFormat: 'h:i K',
+                allowInput: true
+            });
+        });
+
+        // Submit form event
+        document.getElementById('schedule-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Live Stream Scheduled Successfully!');
+        });
+    </script>
+</body>
+</html>
