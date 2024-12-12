@@ -1,0 +1,7 @@
+Version Number: 1.0.0
+Release Date: 2024-09-05
+Version Information: Initial release with features including automated live streaming to multiple platforms, video conversion, and a user-friendly interface.
+Versioning Format: Follows semantic versioning (MAJOR.MINOR.PATCH), where:
+MAJOR: Incremented for major updates that include breaking changes.
+MINOR: Incremented for backward-compatible new features.
+PATCH: Incremented for backward-compatible bug fixes.

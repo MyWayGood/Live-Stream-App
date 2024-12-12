@@ -1,0 +1,12 @@
+# Python version required
+python==3.12.5
+
+# Dependencies for the app
+pyinstaller==6.10.0
+kivy==2.3.0
+yt-dlp==2024.08.06
+cryptography
+subprocess
+json
+logging
+flatpickr==4.6.13

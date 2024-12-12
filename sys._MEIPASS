@@ -1,0 +1,55 @@
+import sys
+import os
+import json
+
+class LiveStreamApp(App):
+    def load_configurations(self):
+        """Load platform configurations and user preferences."""
+        try:
+            if getattr(sys, 'frozen', False):  # Check if the app is bundled by PyInstaller
+                base_dir = sys._MEIPASS  # Use PyInstaller's temporary folder
+            else:
+                base_dir = os.path.dirname(os.path.abspath(__file__))
+
+            config_path = os.path.join(base_dir, 'config/settings.json')
+			stream_keys_file_path = os.path.join(base_dir, 'config/stream_keys.json')
+            scheduled_streams_file_path = os.path.join(base_dir, 'config/scheduled_streams.json')
+            platforms_path = os.path.join(base_dir, 'config/platforms.json')
+
+            with open(config_path, 'r') as file:
+                self.config = json.load(file)
+                print("Loaded configurations:", self.config)
+
+            with open(platforms_path, 'r') as file:
+                self.stream_keys = json.load(file)
+                print("Loaded stream keys:", self.stream_keys)
+
+            self.ffmpeg_handler = FFMpegHandler("input.mp4", "output.flv")
+
+        except FileNotFoundError as e:
+            print(f"Configuration file not found: {e}")
+            self.error_handling("Configuration file not found. Please check your setup.")
+
+    def build(self):
+        """Build the Kivy UI."""
+        self.load_configurations()
+
+        if getattr(sys, 'frozen', False):
+            base_dir = sys._MEIPASS  # Use PyInstaller's temporary folder
+        else:
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+
+        try:
+            Builder.load_file(os.path.join(base_dir, 'src/kivy/main.kv'))
+            Builder.load_file(os.path.join(base_dir, 'src/kivy/schedule.kv'))
+            Builder.load_file(os.path.join(base_dir, 'src/kivy/live_preview.kv'))
+        except FileNotFoundError as e:
+            print(f"Kivy file not found: {e}")
+            self.error_handling("Kivy UI file not found.")
+
+        self.screen_manager = ScreenManager()
+        self.screen_manager.add_widget(MainScreen(name='main'))
+        self.screen_manager.add_widget(ScheduleScreen(name='schedule'))
+        self.screen_manager.add_widget(LivePreviewScreen(name='live_preview'))
+
+        return self.screen_manager
