@@ -1,0 +1,80 @@
+<VideosScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [10, 10]
+        spacing: 10
+
+        # Title Label
+        Label:
+            text: "Scheduled Videos"
+            font_size: 24
+            bold: True
+            size_hint_y: None
+            height: 40
+            color: (0, 0, 0, 1)  # Black color
+
+        # ListView for displaying the scheduled videos
+        ScrollView:
+            size_hint: (1, 0.7)
+            BoxLayout:
+                id: video_list
+                orientation: 'vertical'
+                spacing: 10
+                padding: [5, 5]
+                size_hint_y: None
+                height: self.minimum_height
+
+        # Button for refreshing the video list
+        Button:
+            text: "Refresh"
+            size_hint_y: None
+            height: 40
+            on_press: root.refresh_video_list()
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 50
+            spacing: 10
+
+            # Button to Preview selected video
+            Button:
+                text: "Preview Video"
+                on_press: root.preview_video()
+
+            # Button to Edit selected video details
+            Button:
+                text: "Edit Video"
+                on_press: root.edit_video()
+
+            # Button to Delete selected video
+            Button:
+                text: "Delete Video"
+                on_press: root.delete_video()
+
+<VideosItem@BoxLayout>:
+    orientation: 'horizontal'
+    size_hint_y: None
+    height: 50
+    spacing: 10
+
+    # Label for the video name
+    Label:
+        id: video_name
+        text: ''
+        size_hint_x: 0.4
+        color: (0, 0, 0, 1)  # Black color
+
+    # Label for the scheduled date
+    Label:
+        id: video_date
+        text: ''
+        size_hint_x: 0.3
+        color: (0.5, 0.5, 0.5, 1)  # Gray color
+
+    # Label for the scheduled time
+    Label:
+        id: video_time
+        text: ''
+        size_hint_x: 0.3
+        color: (0.5, 0.5, 0.5, 1)  # Gray color

@@ -1,0 +1,76 @@
+<StreamKeyScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 10]
+        spacing: 10
+        
+        Label:
+            text: "Manage Stream Keys"
+            font_size: 24
+            size_hint_y: None
+            height: 50
+            halign: 'center'
+            valign: 'middle'
+            text_size: self.size
+
+        Label:
+            text: "Select Platform:"
+            size_hint_y: None
+            height: 30
+            halign: 'left'
+            valign: 'middle'
+            text_size: self.size
+
+        Spinner:
+            id: platform_spinner
+            text: 'Choose a platform'
+            values: ('Dailymotion', 'Facebook', 'Instagram', 'Kick', 'Rumble', 'TikTok', 'Twitch', 'Vimeo', 'X (Twitter)', 'YouTube')
+            size_hint_y: None
+            height: 40
+
+        Label:
+            text: "Enter Stream Key:"
+            size_hint_y: None
+            height: 30
+            halign: 'left'
+            valign: 'middle'
+            text_size: self.size
+
+        TextInput:
+            id: stream_key_input
+            multiline: False
+            hint_text: "Paste the stream key here"
+            size_hint_y: None
+            height: 40
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 10
+            size_hint_y: None
+            height: 50
+
+            Button:
+                text: "Add Stream Key"
+                on_release: root.add_stream_key()
+
+            Button:
+                text: "Save Stream Key"
+                on_release: root.save_stream_key()
+
+            Button:
+                text: "Retrieve Stream Key"
+                on_release: root.retrieve_stream_key()
+
+            Button:
+                text: "Delete Stream Key"
+                on_release: root.delete_stream_key()
+
+        Label:
+            id: status_label
+            text: "Status: Ready"
+            size_hint_y: None
+            height: 30
+            halign: 'left'
+            valign: 'middle'
+            text_size: self.size
+            color: 0, 1, 0, 1  # Green text for status

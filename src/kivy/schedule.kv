@@ -1,0 +1,132 @@
+#:kivy 2.3.0
+
+<ScheduleScreen>:
+    name: "schedule_screen"
+    
+    BoxLayout:
+        orientation: 'vertical'
+        
+        # Header with title
+        Label:
+            text: "Schedule Live Stream"
+            font_size: 24
+            size_hint_y: 0.1
+            color: 0, 0, 0, 1  # Black text color
+            bold: True
+            halign: 'center'
+            valign: 'middle'
+        
+        # File chooser for video file selection
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.2
+            
+            Label:
+                text: "Select Video File:"
+                font_size: 18
+                size_hint_x: 0.3
+                halign: 'left'
+                valign: 'middle'
+            
+            FileChooserIconView:
+                id: video_chooser
+                path: './media/uploaded-videos/'
+                filters: ['*.mp4']
+                size_hint_x: 0.7
+                on_selection: app.on_video_selected(self.selection)
+        
+        # Date selection using Flatpickr for scheduling
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.15
+            
+            Label:
+                text: "Schedule Date (DD:MM:YYYY):"
+                font_size: 18
+                size_hint_x: 0.3
+                halign: 'left'
+                valign: 'middle'
+            
+            DatePicker:
+                id: date_picker
+                size_hint_x: 0.7
+                on_date_selected: app.on_date_selected(self.text)
+        
+        # Time pickers for start and end time selection
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.15
+            
+            Label:
+                text: "Start Time (HH:MM:SS):"
+                font_size: 18
+                size_hint_x: 0.3
+                halign: 'left'
+                valign: 'middle'
+            
+            TimePicker:
+                id: start_time_picker
+                size_hint_x: 0.35
+                on_time_selected: app.on_start_time_selected(self.text)
+            
+            Label:
+                text: "End Time (HH:MM:SS):"
+                font_size: 18
+                size_hint_x: 0.15
+                halign: 'left'
+                valign: 'middle'
+            
+            TimePicker:
+                id: end_time_picker
+                size_hint_x: 0.35
+                on_time_selected: app.on_end_time_selected(self.text)
+        
+        # Buttons for saving, editing, or deleting the scheduled streams
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.1
+            
+            Button:
+                text: "Save Schedule"
+                font_size: 16
+                on_press: app.save_schedule()
+
+            Button:
+                text: "Edit Schedule"
+                font_size: 16
+                on_press: app.edit_schedule()
+
+            Button:
+                text: "Delete Schedule"
+                font_size: 16
+                on_press: app.delete_schedule()
+        
+        # Labels to show selected dates and times
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.1
+            
+            Label:
+                id: selected_date_label
+                text: "Selected Date: "
+                font_size: 16
+                color: 0, 0, 0, 1
+            
+            Label:
+                id: selected_start_time_label
+                text: "Start Time: "
+                font_size: 16
+                color: 0, 0, 0, 1
+            
+            Label:
+                id: selected_end_time_label
+                text: "End Time: "
+                font_size: 16
+                color: 0, 0, 0, 1
+        
+        # Quit button to exit the screen
+        Button:
+            text: "Back to Main Menu"
+            size_hint_y: 0.1
+            font_size: 18
+            on_press: app.go_back_to_main()

@@ -1,0 +1,81 @@
+<LivePreviewScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+        
+        # Video Player (Preview using FFPlay)
+        BoxLayout:
+            size_hint_y: 0.7
+            canvas:
+                Color:
+                    rgba: 0.2, 0.2, 0.2, 1  # Background color for the video preview area
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: "Live Preview: (FFPlay Window will display the live video)"
+                color: 1, 1, 1, 1
+                font_size: 18
+                halign: 'center'
+                valign: 'middle'
+        
+        # Video Status Information
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.15
+            Label:
+                text: "Status: "
+                color: 1, 1, 1, 1
+                font_size: 16
+                size_hint_x: 0.3
+            Label:
+                id: video_status
+                text: "Not Streaming"
+                color: 1, 0, 0, 1  # Red text for not streaming
+                font_size: 16
+                size_hint_x: 0.7
+        
+        # Resolution and Bitrate Information
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.15
+            Label:
+                text: "Resolution: "
+                color: 1, 1, 1, 1
+                font_size: 16
+                size_hint_x: 0.3
+            Label:
+                id: video_resolution
+                text: "N/A"
+                color: 0, 1, 0, 1  # Green text for available resolution
+                font_size: 16
+                size_hint_x: 0.7
+            Label:
+                text: "Bitrate: "
+                color: 1, 1, 1, 1
+                font_size: 16
+                size_hint_x: 0.3
+            Label:
+                id: video_bitrate
+                text: "N/A"
+                color: 0, 1, 0, 1  # Green text for available bitrate
+                font_size: 16
+                size_hint_x: 0.7
+
+        # Buttons to control the live preview
+        BoxLayout:
+            size_hint_y: 0.2
+            spacing: 20
+            Button:
+                text: "Start Preview"
+                size_hint_x: 0.33
+                on_press: root.start_preview()
+            Button:
+                text: "Pause Preview"
+                size_hint_x: 0.33
+                on_press: root.pause_preview()
+            Button:
+                text: "Stop Preview"
+                size_hint_x: 0.33
+                on_press: root.stop_preview()

@@ -1,0 +1,212 @@
+#:kivy 2.3.0
+
+# Define UI Components
+<UIComponents>:
+    # Define the layout for the TopBar and ScreenManager
+
+    # Root layout of the app
+<MainLayout>:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '50dp'
+
+        Label:
+            text: 'Live Stream App'
+            font_size: '24sp'
+            size_hint_x: 0.7
+            halign: 'left'
+            valign: 'middle'
+
+        Button:
+            text: 'Settings'
+            size_hint_x: 0.3
+            on_press: app.open_settings_popup()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '40dp'
+
+        Label:
+            text: 'Platform:'
+            size_hint_x: 0.3
+
+        Spinner:
+            id: platform_spinner
+            text: 'Select Platform'
+            values: ['YouTube', 'Twitch', 'Facebook', 'Instagram', 'TikTok', 'Dailymotion', 'Kick', 'Rumble', 'Vimeo', 'X (Twitter)', 'Custom Platform']
+            size_hint_x: 0.7
+            on_text: app.set_selected_platform(self.text)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '40dp'
+
+        Label:
+            text: 'Resolution:'
+            size_hint_x: 0.3
+
+        Spinner:
+            id: resolution_spinner
+            text: 'FHD (1920x1080)'
+            values: ['SD (720x480)', 'HD (1280x720)', 'FHD (1920x1080)']
+            size_hint_x: 0.7
+            on_text: app.set_selected_resolution(self.text)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '40dp'
+
+        Label:
+            text: 'Bitrate:'
+            size_hint_x: 0.3
+
+        Spinner:
+            id: bitrate_spinner
+            text: '5000k'
+            values: ['1000k', '2000k', '3000k', '4000k', '5000k', '10000k', '15000k', '20000k', '25000k']
+            size_hint_x: 0.7
+            on_text: app.set_selected_bitrate(self.text)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '40dp'
+
+        Button:
+            text: 'Start Stream'
+            size_hint_x: 0.5
+            on_press: app.start_stream()
+
+        Button:
+            text: 'Stop Stream'
+            size_hint_x: 0.5
+            on_press: app.stop_stream()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '40dp'
+
+        Button:
+            text: 'Schedule Stream'
+            size_hint_x: 0.5
+            on_press: app.open_schedule_popup()
+
+        Button:
+            text: 'View Scheduled Streams'
+            size_hint_x: 0.5
+            on_press: app.show_scheduled_streams()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '40dp'
+
+        Label:
+            text: 'Stream Key:'
+            size_hint_x: 0.3
+
+        TextInput:
+            id: stream_key_input
+            hint_text: 'Enter Stream Key'
+            multiline: False
+            size_hint_x: 0.7
+
+    ScrollView:
+        BoxLayout:
+            id: log_output
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+
+            Label:
+                text: 'Logs will appear here...'
+                size_hint_y: None
+                height: '30dp'
+                halign: 'left'
+                valign: 'middle'
+
+<SettingsPopup@Popup>:
+    title: 'App Settings'
+    size_hint: None, None
+    size: 400, 400
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Configure App Settings Here'
+            size_hint_y: None
+            height: '40dp'
+
+        Button:
+            text: 'Save Settings'
+            size_hint_y: None
+            height: '40dp'
+            on_press: app.save_settings()
+
+<ScheduleStreamPopup@Popup>:
+    title: 'Schedule a Stream'
+    size_hint: None, None
+    size: 400, 500
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Select Date and Time:'
+            size_hint_y: None
+            height: '30dp'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: '40dp'
+
+            Label:
+                text: 'Date:'
+                size_hint_x: 0.3
+
+            Button:
+                text: 'Select Date'
+                on_press: app.open_datepicker()
+
+        Label:
+            text: 'Time (24-hour format):'
+            size_hint_y: None
+            height: '30dp'
+
+        TextInput:
+            id: time_input
+            hint_text: 'HH:MM'
+            multiline: False
+            size_hint_y: None
+            height: '40dp'
+
+        Button:
+            text: 'Schedule Stream'
+            size_hint_y: None
+            height: '40dp'
+            on_press: app.schedule_stream()
+
+<ScheduledStreamsPopup@Popup>:
+    title: 'Scheduled Streams'
+    size_hint: None, None
+    size: 400, 500
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Your Scheduled Streams:'
+            size_hint_y: None
+            height: '30dp'
+
+        ScrollView:
+            BoxLayout:
+                id: scheduled_streams_container
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height

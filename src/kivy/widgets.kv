@@ -1,0 +1,47 @@
+#:kivy 2.3.0
+
+<CustomButton@Button>:
+    font_size: 16
+    background_color: (0.2, 0.6, 0.8, 1)
+    color: (1, 1, 1, 1)
+    size_hint: None, None
+    size: 200, 50
+    background_normal: ''
+    background_down: 'atlas://data/images/defaulttheme/button_pressed'
+    on_press:
+        self.background_color = (0.1, 0.5, 0.7, 1)
+    on_release:
+        self.background_color = (0.2, 0.6, 0.8, 1)
+
+<CustomLabel@Label>:
+    font_size: 18
+    color: (0.9, 0.9, 0.9, 1)
+    halign: 'center'
+    valign: 'middle'
+    size_hint: None, None
+    size: self.texture_size
+
+<CustomTextInput@TextInput>:
+    font_size: 16
+    padding: [10, 10]
+    size_hint: None, None
+    size: 300, 50
+    background_color: (0.9, 0.9, 0.9, 1)
+    foreground_color: (0, 0, 0, 1)
+    multiline: False
+    cursor_color: (0, 0, 0, 1)
+    border: (1, 1, 1, 1)
+    on_text_validate:
+        self.validate_input()
+
+    # Custom validation logic for text input fields
+    def validate_input(self):
+        if len(self.text) == 0:
+            self.background_color = (1, 0.5, 0.5, 1)
+        else:
+            self.background_color = (0.9, 0.9, 0.9, 1)
+
+<CustomDropdown@DropDown>:
+    auto_dismiss: True
+    on_select: app.root.on_platform_select(args[1])
+
