@@ -1,0 +1,150 @@
+Live Stream - Windows App Installation Guide
+
+Version: v1.0.0
+Developer: Manikandan Govindan
+Organization: SingleDawn Corp
+Platform: Windows 10 and 11
+Website: avodtv.com
+
+Table of Contents
+
+System Requirements
+
+Prerequisites
+
+Installation Steps
+
+Step 1: Download the Application
+
+Step 2: Unpack the Dependencies
+
+Step 3: Install the Application
+
+Step 4: Verify the Installation
+
+Post-Installation Setup
+
+Troubleshooting
+
+Terms of Service Agreement
+
+1. System Requirements
+
+Before installing the Live Stream - Windows App, ensure your system meets the following minimum requirements:
+
+Operating System: Windows 10 or 11 (64-bit)
+
+Processor: Intel i3 or equivalent (or higher)
+
+Memory: Minimum 4 GB RAM (8 GB recommended)
+
+Hard Disk: 500 MB of free space for application files
+
+Graphics: Integrated or dedicated GPU supporting at least DirectX 11
+
+Internet Connection: Required for live streaming and downloading YouTube videos.
+
+Screen Resolution: 1280x720 or higher.
+
+2. Prerequisites
+
+Before starting the installation, ensure the following tools and libraries are pre-installed on your system:
+
+Python 3.12.5
+
+Verify installation by running: python --version
+
+PowerShell
+
+Required to run the installation scripts.
+
+3. Installation Steps
+
+Step 1: Download the Application
+
+Go to the official website avodtv.com.
+
+Navigate to the "Download" section and download the latest version of the Live Stream - Windows App.
+
+Save the ZIP file to a folder on your local drive.
+
+Step 2: Unpack the Dependencies
+
+Extract the ZIP file into a new folder named LiveStreamApp.
+
+Within this folder, you will see the following directories:
+/dependencies
+/scripts
+/assets
+/config
+/logs
+
+Step 3: Install the Application
+
+Open PowerShell as an Administrator.
+
+Navigate to the folder where you extracted the ZIP file:
+
+cd C:\path\to\LiveStreamApp
+
+Run the installation script:
+
+./scripts/install.bat
+
+This will initiate the following:
+
+Automatic installation of Python modules, Kivy, FFmpeg, YT-DLP, and other dependencies.
+
+Fonts (Arial.ttf and Arial_Bold.ttf) will be installed.
+
+Directories such as uploaded-videos, downloaded-videos, and scheduled-videos will be created.
+
+Step 4: Verify the Installation
+
+After the script completes, verify installation by running the application:
+
+python main.py
+
+The application should launch, and you will be presented with the Main Menu.
+
+4. Post-Installation Setup
+
+Stream Keys Management
+
+Once installed, navigate to the Stream Key submenu to add your platform-specific stream keys:
+
+Open the app.
+
+Go to "Stream Key" from the top menu.
+
+Add or retrieve saved stream keys for platforms like YouTube, Facebook, etc.
+
+Video Scheduling
+
+Use the integrated calendar to schedule live streams by:
+
+Clicking "Schedule" on the main menu.
+
+Selecting the video, date, and time for your broadcast.
+
+5. Troubleshooting
+
+Issue: The app doesn’t launch.
+
+Solution: Ensure Python 3.12.5 is installed correctly. Verify by running python --version.
+
+Issue: Dependency installation failed.
+
+Solution: Check the install.log file in the /logs folder for detailed error messages.
+
+Issue: Unable to schedule videos.
+
+Solution: Verify the JSON files (stream_keys.json, scheduled_videos.json) are not corrupted.
+
+6. Terms of Service Agreement
+
+Before installation begins, users must agree to the Terms of Service. The installation will only proceed if the user agrees.
+
+On running the installer, a prompt will display the Terms of Service PDF.
+
+The user must agree by typing "yes" to continue.

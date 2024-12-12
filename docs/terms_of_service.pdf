@@ -1,0 +1,113 @@
+Terms of Service
+Effective Date: October 10, 2024
+Version: 1.0.0
+Developer: Manikandan Govindan
+Organization: SingleDawn Corp
+Platform: Windows 10 and 11 (and above)
+Website: avodtv.com
+
+This Terms of Service agreement ("Agreement") governs your use of the Live Stream - Windows App ("Software") developed by SingleDawn Corp. Please read this document carefully before installing or using the Software. By installing, accessing, or using the Software, you agree to the terms outlined in this Agreement. If you do not agree to these terms, you may not install or use the Software.
+
+1. Acceptance of Terms
+
+By downloading, installing, or using the Live Stream - Windows App, you accept and agree to be bound by the terms of this Agreement. If you are entering into this Agreement on behalf of an organization or company, you represent and warrant that you have the authority to bind such an organization to the terms of this Agreement.
+
+2. License
+
+SingleDawn Corp grants you a non-exclusive, non-transferable, revocable license to use the Software for personal or organizational purposes, subject to the terms and conditions of this Agreement. The Software is licensed, not sold, to you.
+
+2.1 Restrictions
+
+You may not decompile, reverse-engineer, or disassemble the Software.
+
+You may not distribute, sublicense, or sell the Software or any part of it without prior written permission from SingleDawn Corp.
+
+You are prohibited from modifying or creating derivative works based on the Software.
+
+2.2 Ownership
+
+SingleDawn Corp retains all intellectual property rights to the Software and any related documentation. Your use of the Software grants no title or ownership of the Software.
+
+3. Installation and Use
+
+The Software comes with an automated installation process. By installing the Software, you acknowledge that:
+
+All dependencies (Python, FFmpeg, YT-DLP, Kivy, Flatpickr, etc.) are pre-packaged and installed on your system.
+
+You are responsible for ensuring that your device meets the system requirements:
+
+Operating System: Windows 10 or higher
+
+Processor: 64-bit processor
+
+Memory: Minimum 8 GB RAM
+
+Storage: At least 500 MB of free disk space
+
+Internet Connection: Required for streaming and downloading features
+
+The Software collects minimal data needed for streaming, including but not limited to stream keys and RTMP URLs. No sensitive personal data is collected or stored.
+
+4. User Conduct
+
+By using the Software, you agree not to:
+
+Use the Software for illegal purposes or to violate any applicable law or regulation.
+
+Upload or distribute any content that infringes upon the rights of others or contains unlawful material.
+
+Misuse the Software to harm or disrupt services or networks connected to the Software.
+
+SingleDawn Corp reserves the right to terminate your license if you fail to comply with any of these provisions.
+
+5. Updates and Modifications
+
+SingleDawn Corp reserves the right to modify, update, or discontinue the Software at any time without notice. Updates may include bug fixes, new features, or performance improvements. By continuing to use the Software, you agree to accept any future updates and modifications.
+
+6. Privacy Policy
+
+SingleDawn Corp respects your privacy. No personal data is collected or shared through the Software beyond what is necessary for the application to function, such as stream keys and configuration settings.
+
+For detailed information, please refer to our Privacy Policy, available on our website.
+
+7. Third-Party Services
+
+The Software integrates with various third-party platforms (YouTube, Facebook, Instagram, Twitch, etc.) for live streaming. You acknowledge and agree that your use of these platforms is subject to the terms and conditions of each respective service. SingleDawn Corp is not responsible for any third-party service interruptions or policy changes that may impact the functionality of the Software.
+
+8. Limitation of Liability
+
+To the maximum extent permitted by applicable law, SingleDawn Corp shall not be liable for any indirect, incidental, special, or consequential damages, including but not limited to loss of revenue, data, or business opportunities arising out of your use or inability to use the Software.
+
+8.1 Disclaimer of Warranties
+
+The Software is provided "as-is" without any warranty of any kind, either expressed or implied.
+
+SingleDawn Corp does not warrant that the Software will meet your requirements, operate without interruption, or be error-free.
+
+You assume all responsibility for any damage to your system or data loss that results from using the Software.
+
+9. Indemnification
+
+You agree to indemnify, defend, and hold harmless SingleDawn Corp, its affiliates, and its developers from any claims, liabilities, or expenses arising from your violation of this Agreement or misuse of the Software.
+
+10. Termination
+
+SingleDawn Corp reserves the right to terminate your license to use the Software at any time, with or without cause. Upon termination, you must cease all use of the Software and delete all copies from your system.
+
+11. Governing Law and Dispute Resolution
+
+This Agreement shall be governed by and construed in accordance with the laws of Tamil Nadu, India. Any disputes arising out of or related to this Agreement shall be resolved exclusively through arbitration in Tamil Nadu, India, and you consent to personal jurisdiction and venue in such a forum.
+
+12. Entire Agreement
+
+This Agreement constitutes the entire understanding between you and SingleDawn Corp regarding the use of the Software. Any prior agreements, whether written or oral, are superseded by this Agreement.
+
+13. Contact Information
+
+If you have any questions or concerns regarding this Agreement, please contact us at:
+
+SingleDawn Corp
+Email: support@avodtv.com
+Website: avodtv.com
+
+By clicking "Agree" or by installing the Software, you acknowledge that you have read, understood, and agree to be bound by these terms.

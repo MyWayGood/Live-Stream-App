@@ -1,0 +1,207 @@
+Live Stream - Windows App User Manual (v1.0.0)
+Version: v1.0.0
+Developer: Manikandan Govindan
+Organization: SingleDawn Corp
+Country: India, Tamil Nadu
+Platform: Windows 10 and 11 (and above)
+Website: avodtv.com
+
+Table of Contents
+
+Introduction
+
+Overview of the App
+
+System Requirements
+
+Installing the App
+
+Terms of Service
+
+Getting Started
+
+Launching the App
+
+Main Menu Overview
+
+Understanding Stream Keys
+
+Key Features
+
+Automated Live Streaming
+
+Video Format Conversion
+
+Live Preview of Streams
+
+Media File Analysis
+
+Bitrate and Resolution Settings
+
+Scheduling Live Streams
+
+Using the Calendar Interface (Flatpickr)
+
+Adding and Managing Scheduled Videos
+
+Configuring Date and Time
+
+Managing Videos
+
+Uploading Videos for Streaming
+
+Downloading Videos from YouTube
+
+Organizing Media Files
+
+Live Preview and Monitoring
+
+Monitoring Streams using FFPlay
+
+Checking Stream Quality
+
+Advanced Features
+
+Custom Bitrate and Resolution Settings
+
+Adding Custom RTMP URLs
+
+Using the YouTube Video Downloader
+
+File Management
+
+Directory Structure Overview
+
+JSON File Storage System
+
+Log Files
+
+Installation and Setup
+
+Step-by-Step Installation Instructions
+
+Installing Dependencies Automatically
+
+Uninstalling the App
+
+Security and Error Handling
+
+Handling API Keys
+
+Error Handling Mechanism
+
+Log Files Overview
+
+Testing and Troubleshooting
+
+How to Test App Features
+
+Common Errors and Fixes
+
+App Menus Explained
+
+Stream Key Menu
+
+Schedule Menu
+
+Videos Menu
+
+Live Preview Menu
+
+FAQs
+
+Common Questions Answered
+
+Appendices
+
+FFmpeg and YT-DLP Commands
+
+Shell Scripts Overview
+
+License Information
+
+Detailed Sections
+
+1. Introduction
+
+Overview of the App: The Live Stream - Windows App is designed for administrators to streamline live video broadcasting across multiple social platforms. This section introduces the app’s purpose, the platforms it 
+
+supports, and the technologies it uses like FFmpeg and YT-DLP.
+
+System Requirements: Windows 10 and 11 (and above), 4 GB RAM minimum, 2 GHz CPU, 1 GB free storage space.
+
+Installing the App: Guide users through installation, including how to use the install.sh and install.bat scripts.
+
+Terms of Service: Users must agree to these terms before installing.
+
+2. Getting Started
+
+Launching the App: Explains how to launch the app and navigate through the main menu.
+
+Main Menu Overview: Introduction to the app’s interface, featuring options like Stream Key, Schedule, Videos, and Live Preview.
+
+3. Key Features
+
+Automated Live Streaming: A step-by-step guide for streaming to Dailymotion, Facebook, Instagram, and more.
+
+Video Format Conversion: Instructions for converting videos using FFmpeg for live streaming.
+
+Live Preview: How to preview live streams using FFPlay.
+
+Media File Analysis: Explains how to analyze media files with FFProbe, showing information like codec, resolution, and bitrate.
+
+4. Scheduling Live Streams
+
+Using the Calendar Interface: Explains how to schedule live streams using the Flatpickr calendar interface.
+
+Adding Scheduled Videos: How to add MP4 videos or YouTube URLs for scheduling.
+
+Configuring Date and Time: Details the date and time format required for scheduling.
+
+5. Managing Videos
+
+Uploading Videos: Instructions for uploading MP4 videos for live streaming.
+
+Downloading from YouTube: How to use YT-DLP to download YouTube videos or playlists.
+
+Organizing Media: Explains the directory structure and how to manage uploaded/downloaded videos.
+
+6. Live Preview and Monitoring
+
+Using FFPlay for Monitoring: Guide to setting up live stream monitoring using FFPlay.
+
+Stream Quality Check: Ensures everything is working correctly by checking bitrate, resolution, and stability.
+
+7. Advanced Features
+
+Custom Bitrate and Resolution Settings: Instructions for optimizing streaming settings based on network bandwidth.
+
+Adding Custom RTMP URLs: Allows users to add and manage custom RTMP links for various platforms.
+
+YouTube Video Downloader: Full instructions for downloading videos using YT-DLP.
+
+8. File Management
+
+Directory Structure: Overview of key folders such as uploaded-videos, downloaded-videos, scheduled-videos.
+
+JSON File Storage: Explanation of how the app stores data in platforms.json, stream_keys.json, scheduled_videos.json.
+
+Log Files: Discusses the purpose of log files like install.log, schedule.log, stream.log.
+
+9. Installation and Setup
+
+Step-by-Step Installation: Detailed instructions for using the automated installation scripts (install.sh, install.bat, dependencies_installer.py).
+
+Uninstallation: Instructions for removing the app using uninstall.sh.
+
+10. Security and Error Handling
+
+API Key Storage: Describes how API keys are securely stored and encrypted in JSON files.
+
+Error Handling Mechanisms: Shows how to troubleshoot common errors during installation, streaming, or video conversion.
+
+11. Testing and Troubleshooting
+
+Testing Components: Guide to testing features like live preview, scheduling, and stream quality.
+
+Common Issues: List of common problems and solutions.

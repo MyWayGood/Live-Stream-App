@@ -1,0 +1,125 @@
+Live Stream - Windows App - FAQ
+
+Version: v1.0.0
+Developer: Manikandan Govindan
+Organization: SingleDawn Corp
+Country: India, Tamil Nadu
+Website: avodtv.com
+
+1. What are the system requirements for running the Live Stream - Windows App?
+
+Supported OS: Windows 10, Windows 11 (and above)
+
+Processor: Intel Core i3 or AMD equivalent (or higher)
+
+RAM: Minimum 4 GB (8 GB or more recommended)
+
+Storage: 500 MB free disk space (additional space required for downloaded/uploaded videos)
+
+Dependencies: Python 3.12.5, FFmpeg, Kivy, YT-DLP, Flatpickr, and required fonts (Arial.ttf, Arial_Bold.ttf)
+
+Internet Connection: Required for live streaming, downloading YouTube videos, and updates.
+
+2. How do I install the Live Stream - Windows App?
+
+Download the installation files from avodtv.com.
+
+Unzip the file and run the install.bat (for Windows) or install.sh (for Linux).
+
+The installer will automatically install the required dependencies such as Python, FFmpeg, Kivy, and YT-DLP.
+
+Once the installation is complete, launch the app using main.py or the created shortcut.
+
+Agree to the Terms of Service before proceeding.
+
+3. Can I schedule live streams for multiple platforms at the same time?
+
+Yes, the app allows you to schedule live streams to multiple platforms such as YouTube, Facebook, Twitch, etc. at the same time using the RTMP URLs. You can configure the schedule by specifying the date, start time, and end time for each stream in the "Schedule" section.
+
+4. How do I add my stream key for live streaming?
+
+Navigate to the Stream Key menu.
+
+Select the platform where you wish to live stream (e.g., YouTube, Facebook).
+
+Paste your stream key or generate a new one from the platform.
+
+Save it to automatically include it in your scheduled streams.
+
+5. How do I download YouTube videos or playlists?
+
+Open the YouTube Video Downloader from the main menu.
+
+Paste the YouTube video URL or playlist URL.
+
+Select the directory where you want the videos to be saved (default: downloaded-videos folder).
+
+Click "Download" to save the content using YT-DLP.
+
+6. What video formats are supported for live streaming?
+
+The Live Stream - Windows App primarily supports MP4 videos for live streaming. However, it automatically converts videos into the required streaming format (FLV) using FFmpeg. Supported conversion parameters include:
+
+Video Codec: libx264
+
+Audio Codec: AAC (128 kbps, 2 channels)
+
+7. How do I change the streaming resolution or bitrate?
+
+Go to the Settings menu.
+
+Under "Video Resolution," select your preferred streaming resolution:
+
+SD: 720x480
+
+HD: 1280x720
+
+FHD: 1920x1080
+
+For bitrate, select from predefined options like 1Mbps, 2Mbps, 5Mbps, etc. to match your network conditions.
+
+8. How do I troubleshoot streaming issues?
+
+Buffering or Lagging: Reduce the bitrate or streaming resolution. Ensure you have a stable internet connection.
+
+Stream not starting: Double-check the stream key and RTMP URL for accuracy. Ensure the platform's streaming settings are correct.
+
+App crashes during stream: Check the logs (stream.log) in the logs/ directory for error details. Ensure all dependencies are properly installed.
+
+9. Can I preview the live stream before going live?
+
+Yes, the app provides a Live Preview feature that allows you to preview the stream before it goes live. Use the FFPlay commands from the "Live Preview" menu to check audio and video quality.
+
+10. How do I uninstall the app?
+
+Run the uninstall.sh (for Linux) or uninstall.bat (for Windows) script located in the scripts/ directory.
+
+This will remove all installed dependencies and clear the app's data from your system.
+
+11. Where can I find the log files for debugging?
+
+Log files such as install.log, schedule.log, and stream.log are stored in the logs/ directory. These files contain detailed information about installation, scheduling, and streaming processes, which can be helpful for debugging.
+
+12. What should I do if a scheduled stream fails to start?
+
+Ensure that the scheduled date and time are correctly set using the Flatpickr calendar interface. Check that the platform's RTMP URL and stream key are correct.
+
+Review the schedule.log file for any errors that might have occurred during the scheduling process.
+
+13. Can I use a custom RTMP URL for platforms not listed in the app?
+
+Yes, you can manually add a custom RTMP URL for any platform that supports RTMP. Simply go to the Stream Key menu, select "Add Custom RTMP URL," and enter the platform details.
+
+14. What if the app doesn't open after installation?
+
+Verify that all dependencies were successfully installed by checking the install.log file.
+
+Ensure that Python 3.12.5 is correctly installed on your system.
+
+Try restarting your machine and running the app again.
+
+If the problem persists, reinstall the app by running install.bat or install.sh.
+
+15. Can I delete scheduled or live-streamed videos?
+
+Yes, you can delete already scheduled or live-streamed videos through the Videos menu. Navigate to the video you want to remove and select the delete option.
